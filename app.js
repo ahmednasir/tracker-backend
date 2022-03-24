@@ -11,7 +11,10 @@ app.use(bodyParser.json());
 // set cors
 app.use(cors());
 
-app.use('/api/coordinates', require('./routes/coordinateRoute'));
+app.use('/coordinates', require('./routes/coordinateRoute'));
+app.get('/check', (req, res) => {
+  res.send({ message: 'WorkingFine' })
+})
 
 const port = process.env.PORT || 3001
 app.listen(port, () => console.log(`App listening on port! ${port}`));

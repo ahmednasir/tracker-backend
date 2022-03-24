@@ -9,7 +9,7 @@ router.post('/', (req, res) => {
     const { body } = req;
     createCoordinates(body)
       .then(response => {
-        res.send({ ...config.RESPONSES.SUCCESS, response });
+        res.send(config.RESPONSES.SUCCESS);
       })
       .catch(error => {
         throw error
