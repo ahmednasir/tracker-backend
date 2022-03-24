@@ -8,7 +8,18 @@ const saveCoordinates = async (payload) => {
   }
 }
 
+const queryCoordinates = async (payload) => {
+  try {
+    return await Coordinates.find(payload).lean();
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+
+
 
 module.exports = {
-  saveCoordinates
+  saveCoordinates,
+  queryCoordinates
 }

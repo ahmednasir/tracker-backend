@@ -39,6 +39,7 @@ const coordinatesSchema = new Schema({
 });
 
 coordinatesSchema.index({ userId: 1 });
+coordinatesSchema.index({ createdAt: -1 });
 
 const Coordinates = mongooseConnection.model('coordinates', coordinatesSchema)
 
