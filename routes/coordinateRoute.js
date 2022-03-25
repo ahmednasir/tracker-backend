@@ -7,6 +7,10 @@ const router = express.Router();
 router.post('/', (req, res) => {
   try {
     const { body } = req;
+    console.log('------------------------------------------------');
+    console.log(new Date().toISOString());
+    console.log(body);
+    console.log('------------------------------------------------');
     createCoordinates(body)
       .then(response => {
         res.send(config.RESPONSES.SUCCESS);

@@ -11,8 +11,7 @@ const coordinatesSchema = new Schema({
     required: true
   },
   userId: {
-    type: String,
-    required: true
+    type: String
   },
   createdAt: {
     type: Date,

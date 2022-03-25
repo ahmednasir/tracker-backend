@@ -5,7 +5,6 @@ const { saveCoordinates, queryCoordinates } = require("../services/coordinateSer
 
 const createCoordinates = async (payload) => {
   try {
-    payload.userId = nanoid();
     return await saveCoordinates(payload);
   } catch (error) {
     console.log(error);
